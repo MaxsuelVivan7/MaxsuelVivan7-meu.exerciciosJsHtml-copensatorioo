@@ -1,0 +1,95 @@
+Gerar uma tabela:
+    Crie uma tabela HTML <table> com linhas e colunas utilizando JavaScript.
+    Popule as células da tabela com dados dinamicamente.
+    Aplique CSS para formatar a tabela (bordas, cores, alinhamento).
+
+    
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabela Dinâmica</title>
+  <style>
+    table {
+      width: 50%;
+      border-collapse: collapse;
+      margin: 20px auto;
+    }
+
+    th, td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px;
+    }
+
+    th {
+      background-color: #f2f2f2;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Tabela Dinâmica</h2>
+
+<table id="minhaTabela">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Idade</th>
+      <th>Cidade</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>João</td>
+      <td>25</td>
+      <td>São Paulo</td>
+    </tr>
+    <tr>
+      <td>Maria</td>
+      <td>30</td>
+      <td>Rio de Janeiro</td>
+    </tr>
+    <tr>
+      <td>Carlos</td>
+      <td>28</td>
+      <td>Salvador</td>
+    </tr>
+  </tbody>
+</table>
+
+<script>
+  // Dados para popular a tabela
+  var dados = [
+    { nome: "Ana", idade: 22, cidade: "Porto Alegre" },
+    { nome: "Pedro", idade: 35, cidade: "Curitiba" },
+    { nome: "Mariana", idade: 29, cidade: "Belo Horizonte" }
+  ];
+
+  // Função para popular a tabela
+  function popularTabela() {
+    var tabela = document.getElementById("minhaTabela");
+
+    for (var i = 0; i < dados.length; i++) {
+      var linha = tabela.insertRow(-1);
+      var cell1 = linha.insertCell(0);
+      var cell2 = linha.insertCell(1);
+      var cell3 = linha.insertCell(2);
+
+      cell1.innerHTML = dados[i].nome;
+      cell2.innerHTML = dados[i].idade;
+      cell3.innerHTML = dados[i].cidade;
+    }
+  }
+
+  // Chamando a função para popular a tabela
+  popularTabela();
+</script>
+
+</body>
+</html>

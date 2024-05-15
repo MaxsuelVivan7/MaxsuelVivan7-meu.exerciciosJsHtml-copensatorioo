@@ -1,0 +1,47 @@
+Exibir imagens:
+    Crie elementos <img> para exibir imagens utilizando JavaScript.
+    Defina os atributos src e alt das imagens dinamicamente.
+    Aplique CSS para dimensionar, posicionar e estilizar as imagens.
+
+    
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exibir Imagens</title>
+  <style>
+    .image {
+      width: 200px;
+      height: auto;
+      margin: 10px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <div id="image-container"></div>
+
+  <script>
+    // Array de imagens
+    const images = [
+      { src: 'image1.jpg', alt: 'Imagem 1' },
+      { src: 'image2.jpg', alt: 'Imagem 2' },
+      { src: 'image3.jpg', alt: 'Imagem 3' }
+    ];
+
+    // Container das imagens
+    const imageContainer = document.getElementById('image-container');
+
+    // Adicionando imagens dinamicamente
+    images.forEach(image => {
+      const imgElement = document.createElement('img');
+      imgElement.src = image.src;
+      imgElement.alt = image.alt;
+      imgElement.classList.add('image');
+      imageContainer.appendChild(imgElement);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+Exibir uma lista de itens:
+    Crie uma lista HTML <ul> com itens usando JavaScript.
+    Utilize appendChild para adicionar itens à lista dinamicamente.
+    Aplique CSS para estilizar a lista e seus itens (cores, fontes, espaçamentos).
+
+    
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista Dinâmica</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 10px;
+      background-color: #f4f4f4;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Lista Dinâmica</h1>
+  <ul id="lista">
+  </ul>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var lista = document.getElementById("lista");
+      var itens = ["Item 1", "Item 2", "Item 3", "Item 4", "Item 5"];
+
+      itens.forEach(function(item) {
+        var li = document.createElement("li");
+        li.textContent = item;
+        lista.appendChild(li);
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+Criar um parágrafo:
+    Utilize JavaScript para criar um elemento <p> e inserir um texto dentro dele.
+    Aplique estilos CSS para definir a cor da fonte, o tamanho da fonte e o alinhamento do texto.
+
+    
+    <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo</title>
+  <style>
+    /* Estilos CSS */
+    #meuParagrafo {
+      color: blue; /* Cor da fonte */
+      font-size: 18px; /* Tamanho da fonte */
+      text-align: center; /* Alinhamento do texto */
+    }
+  </style>
+</head>
+<body>
+
+<!-- Elemento <p> -->
+<p id="meuParagrafo"></p>
+
+<script>
+  // JavaScript para inserir texto dentro do elemento <p>
+  var paragrafo = document.getElementById("meuParagrafo");
+  paragrafo.textContent = "Texto inserido dinamicamente com JavaScript.";
+</script>
+
+</body>
+</html>
